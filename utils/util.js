@@ -13,7 +13,16 @@ const formatNumber = n => {
   n = n.toString()
   return n[1] ? n : '0' + n
 }
+let arr = {
+  0: "女",
+  1: "男"
+}
+
+const formateGender = n => {
+  return arr[n]||"未知"
+}
 
 module.exports = {
-  formatTime: formatTime
+  formatTime: formatTime,
+  formateGender
 }
