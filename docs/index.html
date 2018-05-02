@@ -14,10 +14,30 @@
     window.$docsify = {
       loadSidebar: true,
       subMaxLevel: 3,
-      name: '',
-      repo: ''
+      name: 'wx-app',
+      repo: 'openks/wx-app',
+      search: {
+        maxAge: 86400000, // Expiration time, the default one day
+        paths: 'auto', // or 'auto'
+        placeholder: {
+          '/zh-cn/': '搜索',
+          '/': '搜索'
+        },
+
+        noData: '找不到结果!',
+
+        // Localization
+        noData: {
+          '/zh-cn/': '找不到结果',
+          '/': '找不到结果'
+        },
+
+        // Headline depth, 1 - 6
+        depth: 6
+      },
     }
   </script>
   <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
 </body>
 </html>
